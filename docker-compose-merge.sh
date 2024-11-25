@@ -81,8 +81,7 @@ build_compose_file () {
         printf "Expanded relative values for project: %s to %s\n" "${projects[$i]}", "$tempdir/$i.yml"
     done
     printf "\033[1;34mMerging\033[0m\n"
-    $command --verbose \
-        --project-directory . \
+    $command --project-directory . \
         -p 'docker-compose-merge' \
         $alternateFileArgs \
         config > $masterCompose

@@ -2,6 +2,10 @@
 
 This repository contains a bash script named `docker-compose-merge.sh` that will assist you to generate a single docker-compose.yml file by merging specified docker projects together.
 
+Unlike native docker-compose merging: this script will take into account relative directories and expand file paths within your projects' `docker-compose.yml` files.
+
+The final command will look something like: `docker compose --project-directory . -p 'docker-compose-merge' -f /tmp/docker-compose.merge/0.yml -f /tmp/docker-compose.merge/1.yml config > docker-compose.yml` where your compose files are expanded into the `/tmp/docker-compose.merge` directory first.
+
 ## Setup
 
 ### Optionally clone into an existing directory, ex: ```~/code```  *this works as unrelated files are not tracked in this repo*
