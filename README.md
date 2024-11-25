@@ -8,7 +8,9 @@ This repository contains a bash script named `docker-compose-merge.sh` that will
 ```bash
 git clone git@github.com:Sectimus/docker-compose-merge.git /tmp/docker-compose-merge-local && mv /tmp/docker-compose-merge-local/.[!.]* ~/code/
 ```
+The primary benefit of using a unified directory like this, is that with a single command (`docker compose up`) you can bring up multiple projects without needing to `cd` to each one and manage each service individually.
 
+- _You can also keep persistent changes within your unified directory by using a standard `docker-compose.override.yml` file, with changes on a per-service level._
 ### Make the script executable
 
 ```bash
