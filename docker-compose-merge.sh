@@ -83,7 +83,7 @@ build_compose_file () {
     printf "\033[1;34mMerging\033[0m\n"
     $command --verbose \
         --project-directory . \
-        -p 'connect' \
+        -p 'docker-compose-merge' \
         $alternateFileArgs \
         config > $masterCompose
     printf "Master docker compose file located at \033[1;32m%s\033[0m\n" "$masterCompose"
