@@ -1,0 +1,11 @@
+# Ignore everything
+**
+
+# But not these files...
+!.gitignore
+!LICENCE
+!README.md
+!docker-compose-merge.sh
+!docker-compose-merge.hooks.d/.gitignore
+!docker-compose.override-examples
+!docker-compose.override-examples/**
